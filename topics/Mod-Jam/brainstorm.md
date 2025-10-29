@@ -1,35 +1,22 @@
-# TITLE OF PROJECT
-
-AUTHOR NAME
-
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
-
-## Description
-
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
-
-> *The Mayor of Clown Town* is a simulator experience that allows the user to control a small town populated entirely by clowns.
-
-> The experience is controlled via the mouse, with left click selecting a clown and bringing up a menu of options such as "slip of banana peel" or "get into impossible capacious clown-car."
-
-> The project is meant to give the user a sense of what it would be the mayor of a town of clowns, eventually getting the sense that clowns are not taking their civic duties seriously.
-
-## Screenshot(s)
-
-This bit should have some images of the program running so that the reader has a sense of what it looks like. For example:
-
-> ![Image of a clown face](./assets/images/clown.png)
-
-## Attribution
-
-This bit should attribute any code, assets or other elements used taken from other sources. For example:
-
-> - This project uses [p5.js](https://p5js.org).
-> - The clown image is a capture of the clown from the Apple emoji character set.
-> - The barking sound effect is "single dog bark 1" by crazymonke9 from freesound.org: https://freesound.org/people/crazymonke9/sounds/418107/
-
-## License
-
-This bit should include the license you want to apply to your work. For example:
-
-> This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.
+brainstorm for mod jam-
+two characters(the user gets to pick which character they want to play)
+can either be the frog or the fly
+pokemon leaf green intro(i want the start screen to be a similar version of the pokemon game is)
+create two options whether to fight or run(trying to recreate pokemon leaf green batlle where you choose to fight run pick a pokemon or look through your bag but instead there are only two options)
+if youre the frog the mission is to catch the fly
+if youre the fly the mission is to escape the fly(but instead there will be 3 frogs)
+photoshop background, characters and texts to make it look similar
+perhaps the user gets to choose the difficulty(the fly will move faster the harder the level/the frog's tongue will move faster)
+will have a designated instructions button(but will pop up only when you click the button on the screen)
+will add music to the game(maybe ambient)
+will keep a score check(maybe will keep a high score)
+perhaps a timer too
+a game over screen 
+totally forgot but the characters will only be controlled by keys and not mouse
+make a pixelated version of frog and fly 
+perchance add some emotes to the characters lol 
+the fly will be able to move in x and y direction 
+the frog will only move in x direction
+a buzzer sound when the user loses 
+maybe like super mario the if youre a fly you can collect coins 
+you get to buy a life if you redeem 100 coins(but again you need to collect 100 coins in one game)
