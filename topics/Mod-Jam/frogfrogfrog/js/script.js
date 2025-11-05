@@ -47,7 +47,8 @@ const fly = {
  * Creates the canvas and initializes the fly
  */
 function setup() {
-    createCanvas(940, 520);
+    createCanvas(1080, 720);
+    
 
     // Give the fly its first random position
     resetFly();
@@ -64,7 +65,7 @@ function draw() {
 }
 
 /**
- * Moves the fly according to its speed
+ * Moves the fly according to its speed2
  * Resets the fly if it gets all the way to the right
  */
 function moveFly() {
