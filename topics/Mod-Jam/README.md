@@ -16,8 +16,13 @@ I do wish my frog and fly were animated; silly me, I didn’t know how to use lo
 
 ## Screenshot(s)
 
-> ![Image of my SettingSun]('assets/images/screenshots/01.png', assets/images/screenshots/02.pngassets/images/screenshots/03.pngassets/images/screenshots/04.pngassets/images/screenshots/05.png,assets/images/screenshots/06.png, assets/images/screenshots/07.png)
-                            
+> ![Image of my chateau josue](./assets/images/screeshots/01)
+                             (./assets/images/screeshots/02,)
+                            (./assets/images/screeshots/03)
+                            (./assets/images/screeshots/04,)
+                            (./assets/images/screeshots/05,)
+                            (./assets/images/screeshots/06,)
+                            (./assets/images/screeshots/07)
 
 ## New p5 functions used.
 
