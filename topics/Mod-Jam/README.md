@@ -16,13 +16,13 @@ I do wish my frog and fly were animated; silly me, I didn’t know how to use lo
 
 ## Screenshot(s)
 
-> ![Image of my chateau josue](./assets/images/screeshots/01)
-                             (./assets/images/screeshots/02,)
-                            (./assets/images/screeshots/03)
-                            (./assets/images/screeshots/04,)
-                            (./assets/images/screeshots/05,)
-                            (./assets/images/screeshots/06,)
-                            (./assets/images/screeshots/07)
+> ![Image of my chateau josue](./assets/images/screeshots/01.png)
+> ![Image of my chateau josue](./assets/images/screeshots/02.png)
+> ![Image of my chateau josue](./assets/images/screeshots/03.png)
+> ![Image of my chateau josue](./assets/images/screeshots/04.png)
+> ![Image of my chateau josue](./assets/images/screeshots/05.png)
+> ![Image of my chateau josue](./assets/images/screeshots/06.png)
+> ![Image of my chateau josue](./assets/images/screeshots/07.png)
 
 ## New p5 functions used.
 
