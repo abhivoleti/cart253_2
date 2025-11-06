@@ -2,20 +2,28 @@
 
 Abhinav Voleti
 
-[View this project online](https://abhivoleti.github.io/cart253/topics/Art-Jam/)
+[View this project online](https://abhivoleti.github.io/cart253_2/topics/Mod-Jam/)
 
 ## Description
 
-Often, I find myself going to the park near Westmount, up the hill, and staring at the stars whenever i feel low. Its like a small escape, a moment to breathe whenever things feel a lil too much 
+he player gets to choose whether they want to play as the frog or the fly. If they choose the frog, they need to munch on as many flies as possible while making sure not to miss three misses and the game is over. If they choose the fly, they have to escape the frog’s stinky tongue; that’s it.
 
-Lately, life has been overstimualting, and i feel very unaccomplished; even with this project. I had been working on a football game for almost a week or two now, making fields on photoshop, creating my own characters but unfortunately, i got sick and couldnt continue which left me stuck
+I’ve had this idea of making the entire game pixelated, and when I think of pixelated games, games like pokémon, mario, and flappy bird immediately come to mind. I know choosing a character is a simple concept, but the idea actually came from the game alfredo 2, which was released as part of an album by Freddie Gibbs and The Alchemist. I thought it was an absolutely stunning way to promote an album, and I wanted to make something similar; or at least take inspiration from it. That’s how the character selection idea came about.
 
-I ended up rushing thru this new project and it didnt fully satisfy me or reflect by best abilites. Still i realize this is the best way i can capture myself right now. I feel tired and just want to be home. This is it. Setting Sun 
+I also took help from multiple p5.js example files I found online. I don’t remember exactly which ones I used because I pulled small pieces from different places — stuff like transitionTimer, floor, and a few others.
+
+I do wish my frog and fly were animated; silly me, I didn’t know how to use loadAnimation. Nevertheless, I’m really happy with how this project turned out and really glad to see my ideas actually come to life and work the way i imagined.
 
 ## Screenshot(s)
 
-> ![Image of my SettingSun](./assets/images/SettingSun)
-
+> ![Image of my SettingSun](./assets/images/screeshots/01,
+                            ./assets/images/screeshots/02,
+                            ./assets/images/screeshots/03.
+                            ./assets/images/screeshots/04,
+                            ./assets/images/screeshots/05,
+                            ./assets/images/screeshots/06,
+                            ./assets/images/screeshots/07
+)
 ## New p5 functions used.
 
 Audio-(https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio).
@@ -24,8 +32,8 @@ Audio-(https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio).
 
 This project uses p5.js.
 
-Song- Setting Sun by Youll Never Get To Heaven
-https://www.youtube.com/watch?v=x-ErRfoDojo
+Song- Pokemon FireRed/LeafGreen- Pallet Town
+https://www.youtube.com/watch?v=dfRLeXXsdnM&list=PL61BCBEA83232A814&index=3
 
 Combination of all the previous class assessements
 
