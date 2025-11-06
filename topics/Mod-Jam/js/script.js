@@ -12,7 +12,7 @@ const frameDelay = 10;
 
 const frog = {
     body: { x: 320, y: 520, size: 130 },
-    tongue: { x: undefined, y: 480, size: 20, speed: 20, state: "idle" }
+    tongue: { x: undefined, y: 480, size: 20, speed: 20, state: "idle", hit: false }
 };
 
 let fly = { x: 0, y: 200, size: 30, speed: 3 };
@@ -42,6 +42,12 @@ function preload() {
 function setup() {
     createCanvas(880, 540);
     resetFly();
+
+    textFont('Pixelify Sans');
+    textSize(32);
+    fill(255);
+    textAlign(RIGHT, TOP);
+
 }
 
 function draw() {
@@ -79,7 +85,6 @@ function draw() {
             moveTongue();
             checkTongueFlyOverlap();
             drawTongue();
-            drawFrogPlayer();
             drawFly();
             checkMisses();
         } else {
@@ -89,7 +94,6 @@ function draw() {
             autoMoveTongue();
             checkTongueFlyOverlap();
             drawTongue();
-            drawFrogPlayer();
             drawFly();
         }
     }
@@ -112,75 +116,26 @@ function draw() {
 }
 
 function drawFrogImage() {
-    push();
     image(frogImg, 0, 0, width, height);
-    pop();
 }
 
 function drawFlyImage() {
-    push();
     image(flyImg, 0, 0, width, height);
-    pop();
 }
 
-function drawiffrog() {
-    push();
-    image(iffrog, 0, 0, width, height);
-    pop();
-}
-
-function drawiffly() {
-    push();
-    image(iffly, 0, 0, width, height);
-    pop();
-}
-
-function drawfight() {
-    push();
-    image(fight, 0, 0, width, height);
-    pop();
-}
-
-function drawrun() {
-    push();
-    image(run, 0, 0, width, height);
-    pop();
-}
-
-function drawinstructions() {
-    push();
-    image(instructions, 0, 0, width, height);
-    pop();
-}
-
-function drawFrogPlayer() {
-    push();
-    image(frogImg, frog.body.x - frog.body.size/2, frog.body.y - frog.body.size/2, frog.body.size, frog.body.size);
-    pop();
-}
+function drawfight() { image(fight, 0, 0, width, height); }
+function drawrun() { image(run, 0, 0, width, height); }
+function drawinstructions() { image(instructions, 0, 0, width, height); }
 
 function drawFly() {
-    push();
-    fill("#ffeb3b");
-    noStroke();
-    ellipse(fly.x, fly.y, fly.size);
-    pop();
-
-    fill("#ffffff");
-    noStroke();
-    ellipse(fly.x+6, fly.y-5, fly.size/2);
-    pop();
-
-    fill("#000000");
-    noStroke();
-    ellipse(fly.x+10, fly.y-5, fly.size/4);
-    pop();
+    fill("#ffeb3b"); noStroke(); ellipse(fly.x, fly.y, fly.size);
+    fill("#ffffff"); ellipse(fly.x+6, fly.y-5, fly.size/2);
+    fill("#000000"); ellipse(fly.x+10, fly.y-5, fly.size/4);
 }
 
 function moveFlyAuto() {
     fly.x += fly.speed;
     if (fly.x > width) {
-        misses++;
         resetFly();
     }
 }
@@ -203,13 +158,9 @@ function moveFrog() {
 }
 
 let dir = 1;
-
 function moveFrogAuto() {
   frog.body.x += 4 * dir;
-
-  if (frog.body.x >= width - frog.body.size / 2 || frog.body.x <= frog.body.size / 2) {
-    dir *= -1;
-  }
+  if (frog.body.x >= width - frog.body.size / 2 || frog.body.x <= frog.body.size / 2) dir *= -1;
 }
 
 function autoMoveTongue() {
@@ -219,9 +170,7 @@ function autoMoveTongue() {
         frog.tongue.y = frog.body.y;
     } else if (frog.tongue.state === "outbound") {
         frog.tongue.y -= frog.tongue.speed;
-        if (frog.tongue.y <= 0) {
-            frog.tongue.state = "inbound";
-        }
+        if (frog.tongue.y <= 0) frog.tongue.state = "inbound";
     } else if (frog.tongue.state === "inbound") {
         frog.tongue.y += frog.tongue.speed;
         if (frog.tongue.y >= frog.body.y) {
@@ -233,15 +182,17 @@ function autoMoveTongue() {
 
 function moveTongue() {
     frog.tongue.x = frog.body.x;
-    if (frog.tongue.state === "idle") {
-    } else if (frog.tongue.state === "outbound") {
+    if (frog.tongue.state === "outbound") {
         frog.tongue.y -= frog.tongue.speed;
-        if (frog.tongue.y <= 0) {
-            frog.tongue.state = "inbound";
-        }
+        if (frog.tongue.y <= 0) frog.tongue.state = "inbound";
     } else if (frog.tongue.state === "inbound") {
         frog.tongue.y += frog.tongue.speed;
         if (frog.tongue.y >= frog.body.y) {
+            if (playerIsFrog && !frog.tongue.hit) { 
+                misses++; 
+                checkMisses(); 
+            }
+            frog.tongue.hit = false;
             frog.tongue.state = "idle";
             frog.tongue.y = frog.body.y;
         }
@@ -249,53 +200,30 @@ function moveTongue() {
 }
 
 function drawTongue() {
-    push();
-    fill("#ff0000");
-    noStroke();
+    // Tongue
+    fill("#ff0000"); noStroke();
     ellipse(frog.tongue.x, frog.tongue.y, frog.tongue.size);
-    pop();
-
-    push();
-    stroke("#ff0000");
-    strokeWeight(frog.tongue.size);
+    stroke("#ff0000"); strokeWeight(frog.tongue.size);
     line(frog.tongue.x, frog.tongue.y, frog.body.x, frog.body.y);
-    pop();
-
-    push();
+    
+    // Frog body and eyes
+    noStroke();
     fill("#3ca270");
-    noStroke();
     ellipse(frog.body.x, frog.body.y, frog.body.size);
-    pop();
 
-    push();
     fill("#ede075");
-    noStroke();
     ellipse(frog.body.x - 35, frog.body.y - 55, frog.body.size / 4);
-    pop();
-
-    push();
-    fill("#ede075");
-    noStroke();
     ellipse(frog.body.x + 35, frog.body.y - 55, frog.body.size / 4);
-    pop();
 
-    push();
     fill("#000000");
-    noStroke();
     ellipse(frog.body.x - 35, frog.body.y - 55, frog.body.size / 6);
-    pop();
-
-    push();
-    fill("#000000");
-    noStroke();
     ellipse(frog.body.x + 35, frog.body.y - 55, frog.body.size / 6);
-    pop();
 }
 
 function checkTongueFlyOverlap() {
     const d = dist(frog.tongue.x, frog.tongue.y, fly.x, fly.y);
-    const eaten = (d < frog.tongue.size / 2 + fly.size / 2);
-    if (eaten) {
+    if (d < frog.tongue.size / 2 + fly.size / 2) {
+        frog.tongue.hit = true;
         if (playerIsFrog) {
             resetFly();
             frog.tongue.state = "inbound";
@@ -306,9 +234,16 @@ function checkTongueFlyOverlap() {
 }
 
 function checkMisses() {
-    if (misses >= MAX_MISSES) {
-        goToGameOver();
-    }
+    if (playerIsFrog && misses >= MAX_MISSES) goToGameOver();
+
+    if (playerIsFrog) {
+    fill(255);
+    noStroke();
+    textAlign(RIGHT, TOP);
+    textSize(32);
+    text(`strike ${misses}`, width - 20, 20);
+}
+
 }
 
 function goToGameOver() {
@@ -325,6 +260,7 @@ function resetFly() {
 function resetGame() {
     frog.tongue.state = "idle";
     frog.tongue.y = frog.body.y;
+    frog.tongue.hit = false;
     misses = 0;
     resetFly();
 }
@@ -373,15 +309,15 @@ function mousePressed() {
         if (frog.tongue.state === "idle") {
             frog.tongue.state = "outbound";
             frog.tongue.y = frog.body.y;
+            frog.tongue.hit = false;
         }
     }
 }
 
 function keyPressed() {
     if (transitionTimer > 0) return;
-
     if (key === ' ') {
         transitionTimer = transitionDelay;
         pageHistory = ['choose'];
     }
-  }
+}
