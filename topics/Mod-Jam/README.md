@@ -16,7 +16,7 @@ I do wish my frog and fly were animated; silly me, I didn’t know how to use lo
 
 ## Screenshot(s)
 
-> ![Image of my SettingSun](./assets/images/screeshots/01,
+> ![Image of my SettingSun]('assets/images/screeshots/01',
                             ./assets/images/screeshots/02,
                             ./assets/images/screeshots/03.
                             ./assets/images/screeshots/04,
