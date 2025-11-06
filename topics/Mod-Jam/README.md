@@ -16,14 +16,9 @@ I do wish my frog and fly were animated; silly me, I didn’t know how to use lo
 
 ## Screenshot(s)
 
-> ![Image of my SettingSun]('assets/images/screeshots/01.png',
-                            ./assets/images/screeshots/02.png,
-                            ./assets/images/screeshots/03.png,
-                            ./assets/images/screeshots/04.png,
-                            ./assets/images/screeshots/05.png,
-                            ./assets/images/screeshots/06.png,
-                            ./assets/images/screeshots/07.png
-)
+> ![Image of my SettingSun]('assets/images/screenshots/01.png', assets/images/screenshots/02.pngassets/images/screenshots/03.pngassets/images/screenshots/04.pngassets/images/screenshots/05.png,assets/images/screenshots/06.png, assets/images/screenshots/07.png)
+                            
+
 ## New p5 functions used.
 
 Audio-(https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio).
