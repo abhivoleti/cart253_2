@@ -2,7 +2,7 @@
 
 A game about catching flies.
 
-[Play it!](https://pippinbarr.github.io/cart253-examples/topics/making/frogfrogfrog/index.html)
+[Play it!](https://abhivolet.github.io/cart253_2/topics/Mod-Jam)
 
 - [Ideas](./ideas.md)
 - [Planning](./planning.md)

@@ -4,6 +4,7 @@ let gameover;
 let instructionspage;
 let iffrog, iffly;
 let frogImg, flyImg; 
+let leafgreen;
 let fight, instructions, run;
 let frogFrame = 0;
 let flyFrame = 0;
@@ -37,6 +38,7 @@ function preload() {
     instructionspage = loadImage('assets/images/instructionspage.png');
     gameover = loadImage('assets/images/gameover.png');
     backgroundtemplate = loadImage('assets/images/backgroundtemplate.png');
+    leafgreen = loadSound('assets/sounds/leafgreen.mp3');
 }
 
 function setup() {
@@ -48,6 +50,12 @@ function setup() {
     fill(255);
     textAlign(RIGHT, TOP);
 
+    leafgreen.setVolume(0.03);
+    userStartAudio().then(() => {
+    leafgreen.play();
+     });
+
+    
 }
 
 function draw() {
