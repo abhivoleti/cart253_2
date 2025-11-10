@@ -51,6 +51,8 @@ function setup() {
     textAlign(RIGHT, TOP);
 
     leafgreen.setVolume(0.03);
+    leafgreen.loop= true;
+    
     userStartAudio().then(() => {
     leafgreen.play();
      });
@@ -167,7 +169,7 @@ function moveFrog() {
 
 let dir = 1;
 function moveFrogAuto() {
-  frog.body.x += 4 * dir;
+  frog.body.x += 5 * dir;
   if (frog.body.x >= width - frog.body.size / 2 || frog.body.x <= frog.body.size / 2) dir *= -1;
 }
 

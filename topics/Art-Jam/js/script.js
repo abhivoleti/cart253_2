@@ -1,9 +1,9 @@
 
-**
+/**
  * orlando oysters
  * Abhinav Voleti
  * 
-**/ Thats me as a house;stargazing while one of my favorite songs plays in the background. This the closest i feel to home.
+ ** Thats me as a house;stargazing while one of my favorite songs plays in the background. This the closest i feel to home.
  */
 
 "use strict";
