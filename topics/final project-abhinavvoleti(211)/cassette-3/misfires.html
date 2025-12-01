@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>anti%algorithm</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+	<link rel="preload" as="image" href="images/img01.jpg">
+	<link rel="preload" as="image" href="images/img02.jpg">
+	<link rel="preload" as="image" href="images/img03.jpg">
+	<link rel="preload" as="image" href="images/img04.jpg">
+	<link rel="preload" as="image" href="images/img05.jpg">
+	<link rel="preload" as="image" href="images/img06.jpg">
+	<link rel="preload" as="image" href="images/img07.jpg">
+	<link rel="preload" as="image" href="images/img08.jpg">
+	<link rel="preload" as="image" href="images/img09.jpg">
+	<link rel="preload" as="image" href="images/img10.jpg">
+
+</head>
+
+<body>
+
+<nav>
+   
+
+    <div class="nav2">
+        <a href="archive.html">ARCHIVE</a>
+        <a href="maps.html">MAPS</a>
+        <a href="misfires.html">MISFIRES</a>
+        <a href="plantroom.html">PLANTR00M</a>
+        <a href="journal.html">JOURNAL</a>
+        <a href="index.html">%%%%%%%</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="indicator"></div>
+
+    <div class="gallery2">
+		
+        <div class="gallery-items"><img src="images/img13.jpg"class="shadow">></div>
+        <div class="gallery-items"><img src="images/img14.jpg"class="shadow"></div>
+        <div class="gallery-items"><img src="images/img15.jpg"class="shadow"></div>
+        <div class="gallery-items"><img src="images/img16.jpg"class="shadow"></div>
+        <div class="gallery-items"><img src="images/img17.jpg"class="shadow"></div>
+        <div class="gallery-items"><img src="images/img18.jpg"class="shadow"></div>
+        <div class="gallery-items"><img src="images/img19.jpg"class="shadow"></div>
+    </div>
+	</div>
+	</div>
+</div>
+
+<div class="mtext">
+    <p>When I say “misfire,” I don’t mean it in a negative way. I’m referring to those unexpected experiences in my life where I found myself in places I normally wouldn’t be outside my usual “genre”  yet ended up loving or at least genuinely enjoying them. That’s the beauty of exploring things on your own rather than relying on the internet’s algorithm, which follows predictable patterns and rarely gives you the chance to discover something unexpected or truly your own.</p>
+</div>
+
+<script>
+const galleryContainer = document.querySelector(".gallery2");
+const galleryItems = document.querySelectorAll(".gallery-items");
+const indicator = document.querySelector(".indicator");
+
+const defaultFlex = "0 1 40px";
+const hoverFlex = "1 1 400px";
+
+// initialize
+galleryItems.forEach((item, index) => { 
+    item.isHovered = index === 0;
+    item.style.flex = item.isHovered ? hoverFlex : defaultFlex;
+});
+
+// update flex values
+function updateGallery() {
+    galleryItems.forEach(item => {
+        item.style.flex = item.isHovered ? hoverFlex : defaultFlex;
+    });
+}
+
+// hover expand logic
+galleryItems.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+        galleryItems.forEach(i => (i.isHovered = i === item));
+        updateGallery();
+    });
+});
+
+// indicator follow
+galleryContainer.addEventListener("mousemove", (e) => {
+    const rect = galleryContainer.getBoundingClientRect();
+    indicator.style.left = `${e.clientX - rect.left}px`;
+});
+</script>
+
+<footer>
+       <small><em>Abhinav Voleti, Cart 211, Fall 2025, Final Project</em></small>
+
+    </footer>
+</body>
+</html>

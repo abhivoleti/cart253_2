@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Journal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="logo">
+ 
+    <div>
+    <div class="nav3">
+        <a href="archive.html">ARCHIVE</a>
+        <a href="maps.html">MAPS</a>
+        <a href="misfires.html">MISFIRES</a>
+        <a href="plantroom.html">PLANTR00M</a>
+        <a href="journal.html">JOURNAL</a>
+         <a href="index.html">%%%%%%%</a>
+    </div>
+</nav>
+<body class="notes-page">
+<div class="date-bar">
+  <span id="date"></span>
+</div>
+
+<div class="note-box">
+  <textarea id="journal" placeholder="..."></textarea>
+</div>
+
+
+<script>
+   
+const date = new Date();
+document.getElementById("date").innerText =
+  date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+
+
+document.getElementById("journal").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    e.preventDefault(); 
+    window.location.href = "shapes.html";
+  }
+});
+
+</script>
+<footer>
+       <small><em>Abhinav Voleti, Cart 211, Fall 2025, Final Project</em></small>
+
+    </footer>
+</body>
+</body>    
+</html>

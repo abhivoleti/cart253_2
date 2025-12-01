@@ -1,0 +1,573 @@
+body {
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(255, 255, 255);
+}
+
+a{
+   
+    display: block;
+    font-size: 19px;
+    margin-bottom: 0px;
+    text-decoration: none;
+    color: rgb(44, 32, 32);
+}
+
+.sideA {
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    display: grid;
+    gap: 6px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    justify-content: space-around;  
+}
+
+ .sideB {
+    position: absolute;
+    top: 60%;
+    left: 75%;;
+    display: grid;
+    text-align: left;
+    margin-top: 0%;
+    gap: 6px;
+    margin-bottom: 10px;
+    justify-content: space-around;  
+}
+
+p1 {
+    position: absolute;
+    font-family:"Bakbak One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    top: 50%;   
+    left: 70%;
+    font-size: 33px;
+    color: rgb(12, 8, 8);
+}
+
+
+p2 {
+    position: absolute;
+   font-family:"Bakbak One", sans-serif;
+   font-weight: 400;
+    font-style: normal;
+    top: 56%;   
+    left: 75%;
+    font-size: 21px;
+    color: rgb(255, 0, 0);
+}
+p3 {
+    position: absolute;
+    font-family:"Bakbak One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    top: 56%;   
+    left: 70%;
+    font-size: 21px;
+    color: rgb(255, 0, 0);
+}
+nav a:hover{
+    color:grey;
+}
+
+.nav2{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    padding: 0 20px;
+    width: 90%;
+}
+
+.nav4{
+    position: absolute;
+    top: 69%;
+    left: 32%;
+    display: flex;
+    gap: 225px;
+    justify-content: space-around;  
+    text-align: auto;
+}
+
+
+
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    font-family: "DM Mono", monospace;
+}
+
+
+
+.header {
+    position: absolute;
+    width: 100%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.text {
+    position: relative;
+    width: max-content;
+    padding: 10px;
+}
+
+.text p {
+    font-size: 22px; 
+    margin: 0;  
+}
+
+.text-revealer {
+    position: absolute;
+    top: 510;
+    width: 100%;
+    height: 100%;
+}
+                    
+.text-revealer::after {
+    content: "";
+    position: absolute;
+    top:510px;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+
+
+.gallery {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+}
+
+
+.img {
+    position: absolute;
+    width: 380px;      
+    height: 500px;
+    overflow: hidden;
+
+    
+    will-change: transform, width, height, top, left;
+}
+
+.img {
+    position: absolute;
+    width: 75px;
+    height: 100px;
+    overflow: hidden;
+    will-change: transform, width, height, top, left;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1200px;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+
+.indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgb(0, 0, 0);
+    pointer-events: none;
+    
+}
+
+
+.gallery2 {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    overflow: hidden;
+    gap: 4px;
+}
+
+
+.gallery-items {
+    flex: 0 1 25px; 
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: flex 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.gallery-items.hovered {
+    flex: 1 1 500px;
+}
+
+
+.gallery-items img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.shadow {
+   display: inline-block;
+    border-radius: 2px;
+    box-shadow:
+        0 225px 255px rgba(0, 0, 0, 0.35),
+        0 0 280px rgba(230, 220, 200, 0.9),
+        0 0 810px rgba(230, 220, 200, 0.75) inset;
+}
+
+.book {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  
+  gap: 40px;
+}
+.right-img{
+    height: 250px;
+    width: auto;
+    justify-content: center;
+    top: 65%;
+    position:absolute;
+}
+
+.nav3 {
+  width: 90%;
+  max-width: 2000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 35px 25px;
+  position: absolute;
+    display: flex; 
+}
+
+.nav3 a{
+    a{
+     display: block;
+    font-size: 19px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+}
+
+.page {
+  background: white;
+  width: 50%;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 4px;
+    margin-top: 3%;
+     margin-bottom: 3%;
+     position: relative;
+     overflow: visible;
+}
+
+.page::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  border-radius: 0 0 4px 4px;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  pointer-events: none;
+}
+
+
+.left img {
+  width: 100%;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.two-column-text {
+  column-count: 2;
+  column-gap: 40px;
+  line-height: 1.3;
+  font-size: 16px;
+  color: #333;
+}
+
+.notes-page {
+  margin: 0;
+  background: #1E1E1E;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", sans-serif;
+  color: #fff;
+}
+
+.notes-page .date-bar {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+.notes-page .note-box {
+  width: 60%;
+  margin: 80px auto;
+  background: #2A2A2A;
+  border-radius: 12px;
+  padding: 40px;
+  height: 70vh;
+}
+
+.notes-page #journal {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  resize: none;
+  color: #E5E5E5;
+  font-size: 22px;
+  outline: none;
+  line-height: 1.6;
+}
+
+
+.clo{
+    width: 1000px;
+    margin-top: 100px;
+    position: absolute;
+    left: 3%;
+    border-radius: 0 0 4px 4px;
+
+  box-shadow: 0 20px 30px rgba(0,0,0,0.08);
+  pointer-events: none;
+}
+
+footer{
+    margin-top: 50px;
+    text-align: right;
+    position: absolute;
+    top: 92%;
+    width: auto;
+}
+ 
+.mtext{
+    position: absolute;
+    width: 1100px;
+    top: 86%;
+    margin-left: 18%;
+    text-align: center;
+
+}
+
+.data{
+    
+    position: absolute;
+    font-family:"Bakbak One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    top: 50%;   
+    left: 32%;
+    font-size: 33px;
+    color: rgb(12, 8, 8);
+    width: 1000px;
+}
+
+
+@media (max-width: 768px) {
+
+    body {
+        overflow: auto;
+        background: #fff;
+        font-size: 16px;
+    }
+
+ 
+    .nav2 {
+        position: relative;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 16px;
+        color: #000;
+    }
+
+
+    p1, p2, p3, .data {
+        position: relative;
+        top: auto;
+        left: auto;
+        font-size: 22px !important;
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .sideA,
+    .sideB {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        margin: 20px 0;
+    }
+
+    
+    .container {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+
+    .indicator {
+        display: none;
+    }
+
+   
+    .gallery2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        gap: 10px;
+    }
+
+    .gallery-items {
+        flex: none !important;
+        width: 100%;
+        height: auto;
+        transition: none;
+    }
+
+    .gallery-items img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+
+    .mtext {
+        position: relative;
+        top: auto;
+        width: 90%;
+        margin: 40px auto;
+        text-align: left;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .book {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .page {
+        width: 100%;
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .two-column-text {
+        column-count: 1;
+    }
+
+    .right-img {
+        position: relative;
+        top: auto;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 20px;
+    }
+
+
+    .notes-page .note-box {
+        width: 90%;
+        height: 60vh;
+        padding: 20px;
+    }
+
+    .notes-page #journal {
+        font-size: 18px;
+    }
+
+ 
+    .clo {
+        width: 100%;
+        margin: 50px auto;
+        left: 0;
+        box-shadow: none;
+    }
+
+    footer {
+        position: relative;
+        top: auto;
+        margin: 40px 0;
+        text-align: center;
+    }
+}
+
+.ptext{
+    position: absolute;
+    width: 600px;
+    top: 40%;
+    margin-left: 64%;
+    text-align: center;
+}

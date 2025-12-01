@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>anti%algorithm</title>
+		<meta charset="utf-8">
+		<meta name="generator" content="Three.js Editor">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		</style>
+	</head>
+    <main>
+		<body>
+	
+        <nav>
+		<div class="nav2">
+    
+        <a href="archive.html">ARCHIVE</a>
+        <a href="maps.html">MAPS</a>
+		
+		
+		<a href="misfires.html">MISFIRES</a>
+		<a href="plantroom.html">PLANTR00M</a>
+		<a href="journal.html">JOURNAL</a>
+		<a href="index.html">%%%%%%%</a>
+		</nav>
+        </div>
+        
+		<div class="header">
+			<div class="text">
+				<p>ART</p>
+				<div class="text-revealer"></div>
+			</div>
+			<div class= "text">
+				<p>WITHOUT ALGORITHM</p>
+				<div class="text-revealer">					
+				</div>
+					</div>
+			<div class="gallery">
+		
+				<div class="img">
+					<img src="images/img01.jpg" alt="" />
+				</div>
+				<div class="img">
+					<img src="images/img02.jpg" alt=""/>
+				</div>
+				<div class="img">
+					<img src="images/img03.jpg" alt="" />
+				</div>
+				<div class="img">
+					<img src="images/img04.jpg" alt="" />
+				</div>
+				<div class="img">
+					<img src="images/img05.jpg" alt=""  />
+				</div>
+				<div class="img">
+					<img src="images/img06.jpg" alt=""/>
+				</div>
+				<div class="img">
+					<img src="images/img07.jpg" alt="" />
+				</div>
+				<div class="img">
+					<img src="images/img08.jpg" alt="" />
+				</div>
+				<div class="img">
+					<img src="images/img09.jpg" alt="" />
+				</div>
+
+					<div class="img">
+					<img src="images/img10.jpg" alt="" />
+				</div>
+				<div class="img">
+					<img src="images/img11.jpg" alt="" />
+				</div>
+				<div class="img">
+					<img src="images/img12.jpg" alt="" />
+				</div>
+
+				</div>
+			</div>
+		</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+		<script>
+window.onload = () => {
+
+    const position = [
+        { top: "5%", left: "8%" },
+        { top: "5%", left: "33%" },
+        { top: "5%", left: "55%" },
+        { top: "5%", left: "75%" },
+        { top: "48%", left: "18%" },
+        { top: "48%", left: "40%" },
+        { top: "48%", left: "62%" },
+        { top: "48%", left: "83%" },
+        { top: "89%", left: "10%" },
+        { top: "89%", left: "32%" },
+        { top: "89%", left: "55%" },
+        { top: "89%", left: "77%" },
+        { top: "89%", left: "95%" },
+        { top: "89%", left: "25%" },
+        { top: "89%", left: "48%" },
+    ];
+
+    const imgs = document.querySelectorAll(".img");
+
+    gsap.set(".img", {
+        top: "50%",
+        left: "50%",
+        xPercent: -50,
+        yPercent: -50,
+        width: 0,
+        height: 0,
+        opacity: 0
+    });
+
+    gsap.from("p", {
+        y: 40,
+        opacity: 0,
+        ease: "power4.out",
+        duration: 1.9,
+        stagger: 0.15,
+        delay: 0.3
+    });
+
+    gsap.to(".img", {
+        opacity: 1,
+        width: 400,
+        height: 300,
+        stagger: 0.12,
+        duration: 0.8,
+        ease: "power2.out",
+        delay: 1,
+        onComplete: scatter
+    });
+
+    function scatter() {
+        gsap.to(".img", {
+            top: (i) => position[i].top,
+            left: (i) => position[i].left,
+            xPercent: 0,
+            yPercent: 0,
+            width: 255,
+            height: 165,
+            duration: 1,
+            stagger: 0.07,
+            ease: "power2.out"
+        });
+    }
+};
+</script>
+
+<footer>
+       <small><em>Abhinav Voleti, Cart 211, Fall 2025, Final Project</em></small>
+
+    </footer>
+</main>
+
+</body>
+    	
+</html>

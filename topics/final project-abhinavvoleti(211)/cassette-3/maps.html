@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>spin2</title>
+    <meta charset="utf-8">
+    <meta name="generator" content="Three.js Editor">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 11px;
+            background-color: #000;
+            margin: 0;
+        }
+        canvas { display: block; }
+    </style>
+</head>
+<nav>
+     
+
+    <div class="nav2">
+        
+        <a href="archive.html">ARCHIVE</a>
+        <a href="maps.html">MAPS</a>
+        <a href="misfires.html">MISFIRES</a>
+        <a href="plantroom.html">PLANTR00M</a>
+        <a href="journal.html">JOURNAL</a>
+        <a href="index.html">%%%%%%%</a>
+    </div>
+
+
+<div class="nav4">
+	<a href="music.html">music/island</a>
+	<a href="clothes.html">clothing/dome</a>
+	<a href="forest.html">forest/of/illusions</a>
+</div>
+
+</nav>
+
+<body ontouchstart="">
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "./js2/three.module.js"
+        }
+    }
+    </script>
+
+    <script type="module">
+
+        import * as THREE from 'three';
+        import { APP } from './js2/app.js';
+
+        window.THREE = THREE;
+
+        const loader = new THREE.FileLoader();
+        loader.load('./app1.json', (text) => {
+
+            const player = new APP.Player();
+            player.load(JSON.parse(text));
+            player.setSize(window.innerWidth, window.innerHeight);
+            player.play();
+
+            document.body.appendChild(player.dom);
+
+            window.addEventListener('resize', () => {
+                player.setSize(window.innerWidth, window.innerHeight);
+            });
+        });
+
+    </script>
+<footer>
+       <small><em>Abhinav Voleti, Cart 211, Fall 2025, Final Project</em></small>
+
+    </footer>
+</body>
+</html>
