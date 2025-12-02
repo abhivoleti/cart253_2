@@ -413,7 +413,7 @@ footer{
 }
 
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
 
     body {
         overflow: auto;
@@ -570,4 +570,4 @@ footer{
     top: 40%;
     margin-left: 64%;
     text-align: center;
-} */
+}
