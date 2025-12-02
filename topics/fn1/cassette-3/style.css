@@ -5,6 +5,14 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+html {
+  transform: scale(0.7);
+  transform-origin: top left;
+  width: 142.857%; /* 1 / 0.7 */
+  height: 142.857%;
+}
+
+
 a{
    
     display: block;
