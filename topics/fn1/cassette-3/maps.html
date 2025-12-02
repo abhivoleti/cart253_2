@@ -3,46 +3,122 @@
 <head>
     <title>spin2</title>
     <meta charset="utf-8">
-    <meta name="generator" content="Three.js Editor">
-   <meta name="viewport" content="width=device-width, initial-scale=0.7, maximum-scale=0.7">
-	<link rel="stylesheet" href="style.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            font-family: sans-serif;
-            font-size: 11px;
-            background-color: #000;
-            margin: 0;
+        
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            width: 30px;
+            height: 22px;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        canvas { display: block; }
+
+        .hamburger div {
+            height: 4px;
+            background: #000000;
+            border-radius: 2px;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            @media (max-width: 768px) {
+
+    .nav2, .nav4 {
+        flex-direction: column;
+        display: none;
+        background: #ffffff;
+        width: 100%;
+        padding: 0;             
+        margin: 0;              
+        gap: 0;                 
+    }
+
+    .nav2 a, .nav4 a {
+        padding: 8px 10px;  
+        margin: 0;             
+    }
+}
+
+            .nav2.show, .nav4.show {
+                display: flex;
+            }
+
+            nav {
+                padding: 10px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+             font-size: 12px;
+            color: #aaa;
+        }
     </style>
 </head>
+<body>
+
 <nav>
-     
+    <div class="nav-container">
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
 
-    <div class="nav2">
-        
-        <a href="archive.html">ARCHIVE</a>
-        <a href="maps.html">MAPS</a>
-        <a href="misfires.html">MISFIRES</a>
-        <a href="plantroom.html">PLANTR00M</a>
-        <a href="journal.html">JOURNAL</a>
-        <a href="index.html">%%%%%%%</a>
+        <!-- Menus -->
+        <div class="nav2" id="nav2">
+            <a href="archive.html">ARCHIVE</a>
+            <a href="maps.html">MAPS</a>
+            <a href="misfires.html">MISFIRES</a>
+            <a href="plantroom.html">PLANTR00M</a>
+            <a href="journal.html">JOURNAL</a>
+            <a href="index.html">%%%%%%%</a>
+        </div>
+
+        <div class="nav4" id="nav4">
+            <a href="music.html">music/island</a>
+            <a href="clothes.html">clothing/dome</a>
+            <a href="forest.html">forest/of/illusions</a>
+        </div>
     </div>
-
-
-<div class="nav4">
-	<a href="music.html">music/island</a>
-	<a href="clothes.html">clothing/dome</a>
-	<a href="forest.html">forest/of/illusions</a>
-</div>
-
 </nav>
+
+<main>
+    <!-- Your existing canvas / Three.js content here -->
+</main>
+
+<footer>
+    <small><em>Abhinav Voleti, Cart 211, Fall 2025, Final Project</em></small>
+</footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const nav2 = document.getElementById('nav2');
+    const nav4 = document.getElementById('nav4');
+
+    hamburger.addEventListener('click', () => {
+        nav2.classList.toggle('show');
+        nav4.classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>
+
 
 <body ontouchstart="">
 

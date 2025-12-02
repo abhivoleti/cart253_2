@@ -413,6 +413,14 @@ footer{
     width: 1000px;
 }
 
+.ptext{
+    position: absolute;
+    width: 600px;
+    top: 40%;
+    margin-left: 64%;
+    text-align: center;
+} 
+
 
 @media (max-width: 768px) {
 
@@ -480,8 +488,16 @@ footer{
 
    
     .gallery2 {
-        display: flex;
+        display:contents;
         flex-direction: column;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        gap: 10px;
+    }
+    .gallery {
+        display: contents;
+        flex-direction:column;
         width: 100%;
         height: auto;
         overflow: visible;
@@ -558,17 +574,23 @@ footer{
     }
 
     footer {
-        position: relative;
-        top: auto;
-        margin: 40px 0;
+        position: absolute;
+        top: 90%;
         text-align: center;
     }
-}
 
 .ptext{
-    position: absolute;
-    width: 600px;
-    top: 40%;
-    margin-left: 64%;
+    position: relative;
+    width: auto;
+    top: 70%;
+    margin-left: 0%;
     text-align: center;
+}
+
+.text {
+    position: relative;
+    width: max-content;
+    padding: 0px;
+}
+
 }

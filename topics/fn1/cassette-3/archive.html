@@ -142,17 +142,22 @@ window.onload = () => {
     });
 
     function scatter() {
-        gsap.to(".img", {
-            top: (i) => position[i].top,
-            left: (i) => position[i].left,
-            xPercent: 0,
-            yPercent: 0,
-            width: 255,
-            height: 165,
-            duration: 1,
-            stagger: 0.07,
-            ease: "power2.out"
-        });
+    if (window.innerWidth < 768) {
+        return; 
+    }
+
+    gsap.to(".img", {
+        top: (i) => position[i].top,
+        left: (i) => position[i].left,
+        xPercent: 0,
+        yPercent: 0,
+        width: 255,
+        height: 165,
+        duration: 1,
+        stagger: 0.07,
+        ease: "power2.out"
+    });
+
     }
 };
 </script>
