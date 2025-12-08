@@ -1,21 +1,22 @@
 let gif;
-let menuImgs = [];   // NEW — menu icons ONLY
+let menuImgs = [];  
 let index = 0;
-
+//dimensions
 const W = 1400;
 const H = 1200;
 
 let scaleFactor;
 
-// GAME STATE
+
 let state = "menu";
 
 // GAME ASSETS
 let groundImg, c1, c2, c3;
 let btImg, tpImg, spImg;
+let toiletshooter;
 let gameoverImg;
 
-// CHARACTER PROPERTIES
+// char properties 
 let charX = 200;
 let charY = 900;
 let jumpHeight = 0;
@@ -33,22 +34,24 @@ let activeX;
 function preload() {
   gif = loadImage('assets/images/kaj.gif');
 
-  // MENU IMAGES (what you SEE before pressing ENTER)
-  menuImgs[0] = loadImage('assets/images/bullets.png');
+  //images after you click down/up arrow
+  menuImgs[0] = loadImage('assets/images/bullets.png'); 
   menuImgs[1] = loadImage('assets/images/grenades.png');
   menuImgs[2] = loadImage('assets/images/spaghetti.png');
 
-  // GAME IMAGES (what you SEE after pressing ENTER)
-  groundImg = loadImage('assets/images/ground.png');
-  c1 = loadImage('assets/images/char1.png');
-  c2 = loadImage('assets/images/char.gif');
-  c3 = loadImage('assets/images/char3.png');
 
-  btImg = loadImage('assets/images/bt.png');  // bullet sprite
-  tpImg = loadImage('assets/images/tp.png');  // toilet paper sprite
-  spImg = loadImage('assets/images/sp.png');  // spaghetti sprite
+  groundImg = loadImage('assets/images/ground.png');
+  c1 = loadImage('assets/images/char1.png'); //didnt use might use
+  c2 = loadImage('assets/images/char.gif');  //main character gif 
+  c3 = loadImage('assets/images/char3.png'); //didnt use might use
+
+  btImg = loadImage('assets/images/bt.png');   //imgbullets
+  tpImg = loadImage('assets/images/tp.png');   //imgtoiletpaper
+  spImg = loadImage('assets/images/sp.png');  //imgspaghetti
 
   gameoverImg = loadImage('assets/images/gameover.png');
+
+  toiletshooter = loadImage('assets/images/tps.png');
 }
 
 function setup() {
@@ -106,6 +109,7 @@ function drawGame() {
   if (activeX < -100) activeX = W + 400;
 
   image(activeImg, activeX, 950, 110, 80);
+  image(toiletshooter, 1380, 920, 150, 150);
 
   // Collision
   if (activeX < charX + 50 && activeX + 120 > charX) {
@@ -141,6 +145,7 @@ function keyPressed() {
       // TOILET PAPER
       if (index === 1) {
         activeImg = tpImg;
+        activeImg = toiletshooter;
         activeX = tpX = W + 200;
       }
 
