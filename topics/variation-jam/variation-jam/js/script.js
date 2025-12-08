@@ -7,7 +7,7 @@ const H = 1200;
 
 let scaleFactor;
 
-
+let activeSpeed;  
 let state = "menu";
 
 // GAME ASSETS
@@ -22,15 +22,15 @@ let charY = 900;
 let jumpHeight = 0;
 let jumping = false;
 
-// PROJECTILE POSITIONS
+
 let btX;
 let tpX;
 let spX;
 
-// ACTIVE PROJECTILE + ACTIVE X
 let activeImg;
 let activeX;
 
+//loading my images and gif
 function preload() {
   gif = loadImage('assets/images/kaj.gif');
 
@@ -72,7 +72,7 @@ function draw() {
 
   pop();
 }
-
+//drawing the menu
 function drawMenu() {
   image(gif, 0, 0, W, H);
   image(menuImgs[index], 0, 0, W, H);  // menu icon ONLY
@@ -105,14 +105,19 @@ function drawGame() {
   image(c2, charX, charY, charW, charH);
 
   // Move only selected projectile
-  activeX -= 29;
-  if (activeX < -100) activeX = W + 400;
+activeX -= activeSpeed;
+
+if (activeX < -100) {
+  activeX = W + 400;
+  activeSpeed = random(15, 40);  // random speed each time it resets
+}
+
 
   image(activeImg, activeX, 950, 110, 80);
   image(toiletshooter, 1380, 920, 150, 150);
 
   // Collision
-  if (activeX < charX + 50 && activeX + 120 > charX) {
+  if (activeX < charX + 20 && activeX + 60 > charX) {
     if (charY > 800) state = "gameover";
   }
 }
@@ -136,20 +141,19 @@ function keyPressed() {
 
     if (keyCode === ENTER) {
 
-      // BULLETS
+      // when you click enter on bullet option it redirects to bullet game and this is where the bullet img speed is set 
       if (index === 0) {
         activeImg = btImg;
         activeX = btX = W + 200;
       }
 
-      // TOILET PAPER
+      // same with toilet paper option
       if (index === 1) {
         activeImg = tpImg;
-        activeImg = toiletshooter;
         activeX = tpX = W + 200;
       }
 
-      // SPAGHETTI
+      // and with spaghetti too
       if (index === 2) {
         activeImg = spImg;
         activeX = spX = W + 200;
@@ -171,6 +175,7 @@ function keyPressed() {
 }
 
 function startGame() {
+  activeSpeed = random(15,40,52); // random speed for selected projectile
   state = "game";
   charY = 900;
   jumpHeight = 0;
