@@ -7,6 +7,9 @@ const H = 1200;
 
 let scaleFactor;
 
+let startTime=0;
+let elapsedTime=0;
+let jerseyFont;
 let activeSpeed;  
 let state = "menu";
 
@@ -52,6 +55,7 @@ function preload() {
   gameoverImg = loadImage('assets/images/gameover.png');
 
   toiletshooter = loadImage('assets/images/tps.png');
+  jerseyFont = loadFont('assets/fonts/Jersey10-Regular.ttf');
 }
 
 function setup() {
@@ -104,6 +108,16 @@ function drawGame() {
   let charH = c1.height / 9;
   image(c2, charX, charY, charW, charH);
 
+  elapsedTime = millis() - startTime/1000;
+
+  push();
+  fill(255);
+  textFont(jerseyFont);
+  textSize(48);
+  textAlign(LEFT, TOP);
+  text("Time Survived: " + nf(elapsedTime / 1000, 1, 2) + "s", 20, 20);
+  pop();
+
   // Move only selected projectile
 activeX -= activeSpeed;
 
@@ -117,7 +131,7 @@ if (activeX < -100) {
   image(toiletshooter, 1380, 920, 150, 150);
 
   // Collision
-  if (activeX < charX + 20 && activeX + 60 > charX) {
+  if (activeX < charX + 35 && activeX + 60 > charX) {
     if (charY > 800) state = "gameover";
   }
 }
@@ -179,6 +193,7 @@ function startGame() {
   state = "game";
   charY = 900;
   jumpHeight = 0;
+  startTime = millis();
 }
 
 function windowResized() {
