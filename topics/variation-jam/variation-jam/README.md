@@ -5,14 +5,9 @@ Abhinav Voleti
 [View this project online](https://abhivoleti.github.io/cart253_2/topics/variation-jam/variation-jam)
 
 ## Description
+I made a simple pixel-style game using an old TV-cable UI as the home screen. It has three modes  bullets, toilet paper, and spaghetti  and each one shoots toward you at a random speed. Your only job is to jump and dodge whatever comes your way.
 
-he player gets to choose whether they want to play as the frog or the fly. If they choose the frog, they need to munch on as many flies as possible while making sure not to miss three misses and the game is over. If they choose the fly, they have to escape the frog’s stinky tongue; that’s it.
-
-I’ve had this idea of making the entire game pixelated, and when I think of pixelated games, games like pokémon, mario, and flappy bird immediately come to mind. I know choosing a character is a simple concept, but the idea actually came from the game alfredo 2, which was released as part of an album by Freddie Gibbs and The Alchemist. I thought it was an absolutely stunning way to promote an album, and I wanted to make something similar; or at least take inspiration from it. That’s how the character selection idea came about.
-
-I also took help from multiple p5.js example files I found online. I don’t remember exactly which ones I used because I pulled small pieces from different places — stuff like transitionTimer, floor, and a few others.
-
-I do wish my frog and fly were animated; silly me, I didn’t know how to use loadAnimation. Nevertheless, I’m really happy with how this project turned out and really glad to see my ideas actually come to life and work the way i imagined.
+I tried using GIF in my project for the first time and im happy with the way how it turned out!!!
 
 ## Screenshot(s)
 
@@ -28,8 +23,8 @@ LoadGifs- https://editor.p5js.org/kjhollen/sketches/S1bVzeF8Z
 
 This project uses p5.js.
 
-Song- Pokemon FireRed/LeafGreen- Pallet Town
-https://www.youtube.com/watch?v=dfRLeXXsdnM&list=PL61BCBEA83232A814&index=3
+Song- Pokemon FireRed/LeafGreen- Viridian City
+https://www.youtube.com/watch?v=16v_M1ygxYE
 
 Combination of all the previous class assessements
 

@@ -6,6 +6,7 @@ const W = 1400;
 const H = 1200;
 
 let scaleFactor;
+let bgMusic;
 
 let startTime=0;
 let elapsedTime=0;
@@ -56,6 +57,9 @@ function preload() {
 
   toiletshooter = loadImage('assets/images/tps.png');
   jerseyFont = loadFont('assets/fonts/Jersey10-Regular.ttf');
+
+  bgMusic = loadSound('assets/sounds/pkmn.mp3');
+
 }
 
 function setup() {
@@ -63,6 +67,10 @@ function setup() {
   createCanvas(W * scaleFactor, H * scaleFactor);
   imageMode(CORNER);
   noSmooth();
+
+  bgMusic.setVolume(0.01);  // volume (0.0 to 1.0)
+  bgMusic.loop();          // plays forever
+
 }
 
 function draw() {
@@ -108,7 +116,7 @@ function drawGame() {
   let charH = c1.height / 9;
   image(c2, charX, charY, charW, charH);
 
-  elapsedTime = millis() - startTime/1000;
+  elapsedTime = millis() - startTime;
 
   push();
   fill(255);
@@ -132,7 +140,7 @@ if (activeX < -100) {
   image(toiletshooter, 1380, 920, 150, 150);
 
   // Collision
-  if (activeX < charX + 35 && activeX + 60 > charX) {
+  if (activeX < charX + 47 && activeX + 60 > charX) {
     if (charY > 800) state = "gameover";
   }
 }
@@ -187,10 +195,15 @@ function keyPressed() {
   if (state === "gameover") {
     if (key === 'r') state = "menu";
   }
+
+  if (!bgMusic.isPlaying()) {
+  bgMusic.loop();
+}
+
 }
 
 function startGame() {
-  activeSpeed = random(15,40,52); // random speed for selected projectile
+  activeSpeed = random(15,52); // random speed for selected projectile
   state = "game";
   charY = 900;
   jumpHeight = 0;
