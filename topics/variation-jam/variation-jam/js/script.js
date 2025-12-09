@@ -68,7 +68,7 @@ function setup() {
   imageMode(CORNER);
   noSmooth();
 
-  bgMusic.setVolume(0.01);  // volume (0.0 to 1.0)
+  bgMusic.setVolume(0.1);  // volume (0.0 to 1.0)
   bgMusic.loop();          // plays forever
 
 }
