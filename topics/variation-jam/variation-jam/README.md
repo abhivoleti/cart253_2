@@ -1,35 +1,38 @@
-# TITLE OF PROJECT
+# Chateau Jose
 
-AUTHOR NAME
+Abhinav Voleti
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://abhivoleti.github.io/cart253_2/topics/variation-jam/variation-jam)
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+he player gets to choose whether they want to play as the frog or the fly. If they choose the frog, they need to munch on as many flies as possible while making sure not to miss three misses and the game is over. If they choose the fly, they have to escape the frog’s stinky tongue; that’s it.
 
-> *The Mayor of Clown Town* is a simulator experience that allows the user to control a small town populated entirely by clowns.
+I’ve had this idea of making the entire game pixelated, and when I think of pixelated games, games like pokémon, mario, and flappy bird immediately come to mind. I know choosing a character is a simple concept, but the idea actually came from the game alfredo 2, which was released as part of an album by Freddie Gibbs and The Alchemist. I thought it was an absolutely stunning way to promote an album, and I wanted to make something similar; or at least take inspiration from it. That’s how the character selection idea came about.
 
-> The experience is controlled via the mouse, with left click selecting a clown and bringing up a menu of options such as "slip of banana peel" or "get into impossible capacious clown-car."
+I also took help from multiple p5.js example files I found online. I don’t remember exactly which ones I used because I pulled small pieces from different places — stuff like transitionTimer, floor, and a few others.
 
-> The project is meant to give the user a sense of what it would be the mayor of a town of clowns, eventually getting the sense that clowns are not taking their civic duties seriously.
+I do wish my frog and fly were animated; silly me, I didn’t know how to use loadAnimation. Nevertheless, I’m really happy with how this project turned out and really glad to see my ideas actually come to life and work the way i imagined.
 
 ## Screenshot(s)
 
-This bit should have some images of the program running so that the reader has a sense of what it looks like. For example:
+> ![Image of my kareem abdul jabbar](./assets/images/screeshots/01.png)
+> ![Image of my kareem abdul jabbar](./assets/images/screeshots/02.png)
+> ![Image of my kareem abdul jabbar](./assets/images/screeshots/03.png)
+> ![Image of my kareem abdul jabbar](./assets/images/screeshots/04.png)
 
-> ![Image of a clown face](./assets/images/clown.png)
+## New p5 functions used.
 
-## Attribution
+LoadGifs- https://editor.p5js.org/kjhollen/sketches/S1bVzeF8Z
+## Atribution 
 
-This bit should attribute any code, assets or other elements used taken from other sources. For example:
+This project uses p5.js.
 
-> - This project uses [p5.js](https://p5js.org).
-> - The clown image is a capture of the clown from the Apple emoji character set.
-> - The barking sound effect is "single dog bark 1" by crazymonke9 from freesound.org: https://freesound.org/people/crazymonke9/sounds/418107/
+Song- Pokemon FireRed/LeafGreen- Pallet Town
+https://www.youtube.com/watch?v=dfRLeXXsdnM&list=PL61BCBEA83232A814&index=3
+
+Combination of all the previous class assessements
 
 ## License
-
-This bit should include the license you want to apply to your work. For example:
 
 > This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.

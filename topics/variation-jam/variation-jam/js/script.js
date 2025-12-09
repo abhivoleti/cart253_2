@@ -114,9 +114,10 @@ function drawGame() {
   fill(255);
   textFont(jerseyFont);
   textSize(48);
-  textAlign(LEFT, TOP);
-  text("Time Survived: " + nf(elapsedTime / 1000, 1, 2) + "s", 20, 20);
+  textAlign(RIGHT, TOP);
+  text("Time Survived: " + nf(elapsedTime / 1000, 1, 2) + "s", W - 20, 20);
   pop();
+  
 
   // Move only selected projectile
 activeX -= activeSpeed;
