@@ -258,12 +258,17 @@ body {
 }
 
 .book {
-  width: 100%;
-  max-width: 1300px;
-  margin: auto;
-  display: flex;
-  
-  gap: 40px;
+  /* height: 800px; */
+
+  max-width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  display: grid;
+  margin-top: 3%;
+    margin-bottom:20%;
+    position: absolute;
+  justify-content: center;
+  left: 12%;
 }
 .right-img{
     height: 250px;
@@ -298,14 +303,16 @@ body {
 
 .page {
   background: white;
-  width: 50%;
-  padding: 40px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  border-radius: 4px;
+  width: 90%;
+  ;
+  padding: 0px;
+  align-items: center;
+ /* box-shadow: 0 0 20px rgba(0,0,0,0.1); */
+  /* border-radius: 4px; */
     margin-top: 3%;
-     margin-bottom: 3%;
-     position: relative;
-     overflow: visible;
+     margin-bottom: 20%;
+     position: absolute;
+     /* overflow: hidden; */
 }
 
 .page::after {
@@ -357,7 +364,9 @@ body {
   border-radius: 12px;
   padding: 40px;
   height: 70vh;
+  opacity: 0.4;
 }
+
 
 .notes-page #journal {
   width: 100%;
