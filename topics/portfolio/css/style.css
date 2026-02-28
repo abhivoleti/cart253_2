@@ -1,0 +1,146 @@
+/*********************************************
+
+Here is a description of any special CSS used.
+In this case it's just padding and margin to 0
+and then centring the canvas (and anything else)
+using the CSS Grid.
+
+Also hides overflow.
+
+**********************************************/
+
+body {
+ background-color: #4400FF;
+  padding: 0;
+  margin: 0;
+  display: grid; /* Set up the grid and justify/align to center */
+  justify-content: center;
+  align-content: center;
+  height: 100vh; /* Body is the height of the viewport */
+  overflow: hidden; /* Hide anything that goes off the window size */
+}
+
+a{
+   
+    display: block;
+    font-size: 19px;
+    margin-bottom: 0px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.sideA {
+    position: absolute;
+    color: blanchedalmond;
+    top: 50%;
+    left: 70%;
+    display: grid;
+    gap: 10px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    justify-content: space-around;  
+}
+nav a:hover{
+    color:grey;
+}
+.books img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.books{
+
+    display: grid;
+    max-width: 100%;
+    gap: 10px;
+
+}
+
+body {
+  margin: 0;
+  background: #4400FF;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr); /* 5 per row */
+  gap: 90px;
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  color: rgb(87, 87, 87);
+  height: 280px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1); /* zoom in */
+}
+
+/* .overlay {
+  
+  position: absolute;
+  font-size: small;
+  font-weight: lighter;
+
+  align-items: center;
+} */
+
+.overlay {
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+ 
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  /* align-items: center;     */
+
+  text-align: center;
+  color: rgb(255, 253, 253);
+  padding: 20px;
+    bottom: 5px;
+  left: 110px;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tags {
+  margin-top: 0px;
+  display: flex;
+  justify-content: center; /* center tags */
+  flex-wrap: wrap;
+  gap: 0px;
+}
+
+.tags span {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2px 8px;
+  font-size: 11px;
+  margin-right: 5px;
+  align-items: center;
+}
+
+
+.nav2{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+  left: 80%;
+    top:3%;
+    align-items: center;
+    /* padding: 0 10px; */
+    width:15%;
+}
