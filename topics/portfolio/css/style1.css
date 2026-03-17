@@ -20,7 +20,7 @@ body {
   width: 80%;
   height: 80%;
   align-items: center;
-
+  
   object-fit: cover;
 }
 
@@ -49,6 +49,7 @@ h1 {
 .description,
 .process {
   margin-top: 40px;
+  align-items: center;
 }
 
 h4 {
@@ -62,8 +63,13 @@ p {
   font-size: 13px;
   line-height: 1.6;
   opacity: 0.85;
-}
+  width: 190%;
+  text-align: center;
 
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .media {
   margin: 40px 0;
 }

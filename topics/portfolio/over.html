@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+<title>portfolio</title>
+<link rel="stylesheet" type="text/css" href="css/style3.css" />
+<script src="js/libraries/p5.min.js"></script>
+<script src="js/libraries/p5.sound.min.js"></script>
+</head>
+<main>
+<nav>
+<div class="nav2">
+<a href="index.html">HOME</a>
+<a href="projects.html">PROJECTS</a>
+<a href="about.html">ABOUT/CV</a>
+</div>
+</nav>
+
+<!-- SLIDESHOW -->
+<div class="slideshow">
+  <h1>PHOTOGRAPHY</h1>
+  <img src="assets/pieces/pho/1.jpg" class="active">
+  <img src="assets/pieces/pho/2.jpg">
+  <img src="assets/pieces/pho/3.jpg">
+  <img src="assets/pieces/pho/11.jpg">
+  <img src="assets/pieces/pho/22.jpg">
+  <img src="assets/pieces/pho/33.jpg">
+  <div class="slideshow-dots"></div>
+</div>
+
+<!-- VIDEO GRID 1 -->
+<div class="video-section">
+  <h1>TOUCH-DESIGNER</h1>
+  <div class="video-grid">
+    <div class="video-card">
+    <video loop muted playsinline>
+        <source src="assets/pieces/td/hughe1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="video-card">
+    <video loop muted playsinline>
+        <source src="assets/pieces/td/spin.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="video-card">
+    <video loop muted playsinline>
+        <source src="assets/pieces/td/stack.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+<!-- VIDEO GRID 2 -->
+<div class="video-section">
+  <h1>AFTER-EFFECTS</h1>
+  <div class="video-grid">
+    <div class="video-card">
+    <video loop muted playsinline>
+        <source src="assets/pieces//ae/fixedskr.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="video-card">
+    <video loop muted playsinline>
+        <source src="assets/pieces/ae/finlv.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="video-card">
+    <video loop muted playsinline>
+        <source src="assets/pieces/ae/finalv reel .mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+<script>
+const imgs = document.querySelectorAll('.slideshow img');
+const dotsEl = document.querySelector('.slideshow-dots');
+let current = 0;
+
+imgs.forEach((_, i) => {
+  const dot = document.createElement('span');
+  if (i === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => goTo(i));
+  dotsEl.appendChild(dot);
+});
+
+function goTo(n) {
+  imgs[current].classList.remove('active');
+  dotsEl.children[current].classList.remove('active');
+  current = (n + imgs.length) % imgs.length;
+  imgs[current].classList.add('active');
+  dotsEl.children[current].classList.add('active');
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight') goTo(current + 1);
+  if (e.key === 'ArrowLeft')  goTo(current - 1);
+});
+
+setInterval(() => goTo(current + 1), 4000);
+
+document.querySelectorAll('.video-card video').forEach(vid => {
+  vid.addEventListener('mouseenter', () => vid.play());
+  vid.addEventListener('mouseleave', () => { vid.pause(); vid.currentTime = 0; });
+});
+</script>
+
+</main>
+</html>
