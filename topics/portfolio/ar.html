@@ -1,46 +1,71 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
-
   <title>portfolio</title>
-
-  <!-- CSS stylesheet(s) -->
-  <link rel="stylesheet" type="text/css" href="css/style2.css" />
-
-  <!-- Library script(s) -->
-
-  <!-- p5.min.js is the main p5 library -->
+  <link rel="stylesheet" type="text/css" href="css/style4.css" />
   <script src="js/libraries/p5.min.js"></script>
-  <!-- p5.sound.min.js allows us to use sound -->
   <script src="js/libraries/p5.sound.min.js"></script>
-
-  <!-- My script(s) -->
-  <!-- <script src="js/script.js"></script> -->
 </head>
 <main>
-    
+  <nav>
+    <div class="nav2">
+      <a href="index.html">HOME</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="about.html">ABOUT/CV</a>
+    </div>
+  </nav>
 
- <nav>
-		<div class="nav2">
-        <a href="index.html">HOME</a>
-        <a href="projects.html">PROJECTS</a>
-        <a href="about.html">ABOUT/CV</a>
-		</div>
+  <!-- PIECE 1 — image -->
+  <div class="piece">
+    <img src="assets/ar/ureflc.jpg" alt="">
+    <div class="description">
+      <h4>Curator's Note</h4>
+      <p>
+        <strong>"eyes on art"</strong> is a visual commentary on attention - where we place it, and what that says about us in shared creative spaces. on the far left, there's a girl staring directly at the camera, and next to her, a man mid-conversation. both are holding tote bags that read <strong>"eyes on art"</strong>. these bags aren't just accessories — they serve as subtle instructions. it's almost as if the bags are reminding them (and us) to stay present, to engage with the art around us rather than just exist alongside it. move toward the center of the image, and you'll notice a dj setup and a small group gathered around it. most of them are either making or observing art. but if you notice, one person stands apart - not because of what he's doing, but because of what he's not. he's on his phone. a black rectangle covers his eyes - a deliberate choice to symbolize his disconnect. his eyes are elsewhere, not on the art, not on the moment. the best part about <strong>"eyes on art"</strong> is that there was actually a piece in the exhibition that said <strong>"eyes on my art."</strong> i grabbed that concept and conveyed the message in my way.
+      </p>
+    </div>
+  </div>
 
-        <div class="grid">
-            <img src="assets/pieces/pho/1.jpg">
-            <img src="assets/pieces/pho/2.jpg">
-            <img src="assets/pieces/pho/2.jpg">
-            <img src="assets/pieces/pho/11.jpg">
-            <img src="assets/pieces/pho/22.jpg">
-            <img src="assets/pieces/pho/333.jpg">
+  <!-- PIECE 2 — image -->
+  <div class="piece">
+    <img src="assets/ar/beerb.jpg" alt="">
+    <div class="description">
+      <h4>Curator's Note</h4>
+      <p>i happened to take these two pictures at the same time. they were placed right next to each other at the gallery, and even though
+        they're clearly different images, i wanted the left one to feel like it's part of the right-like they belong together, but not 
+        entirely. maybe that's why i didn't try to fill up the whole frame; i wanted that tension.
+    another thing i did intentionally was add color to just a part of the baby's face. i remember reading the curator's note-it said the 
+    beer baby represents purity and control, while the beer stands for <strong>recklessness</strong>. so the small area of color is my way of <strong>showing purity</strong>,
+     and the rest left uncolored symbolizes recklessness.also, something i do with my photos is change the exposure or color tone of one of 
+     the images. it's not really random-it's how i like to see the world, and it's part of how i process it visually.</p>
+    </div>
+  </div>
 
-        </div>
-    <body>
-    </body>
-    </main>
-    </html>
+  <div class="piece">
+    <video loop muted playsinline preload="metadata">
+      <source src="assets/ar/showbix.mp4" type="video/mp4">
+    </video>
+    <div class="description">
+      <h4>Curator's Note</h4>
+      <p>the beginning sequence of the video shows everything in black and white, except for the artist  he's in color, almost glowing. to me, that felt like being completely disconnected from everything around me, just locked into listening to this one man speak. towards the end, right when he says "that's how people live on, remember that," he flashes into blue. that moment says everything. the artist's name is navy blue, and to me, that flash wasn’t just visual it was symbolic. his words, his thoughts, his purity that’s what navy blue represents. and giving him that blue glow was my way of saying: this is navy blue
+i love this video so much. there are so many little details too, like the font in the beginning being spaced out loud and clear while towards the end, the letters are so close together, like they’re hugging each other. and also, near the end, the camera loses focus and blurs out, which felt like a subtle way of saying the camera was crying or rather, the person behind it was. i was actually crying hahahaif you look closely at the video, you’ll notice the visuals around are hazy and glowing that’s because it’s all from my point of view. i was in tears the whole time. everything looked soft, unfocused, almost dreamlike. it’s that feeling when your eyes are filled with tears  you can still see, but everything’s blurred, glowing at the edges, like the world is melting quietly in front of you. that’s what i was seeing. that’s what i wanted the video to feel like.
+one last detail i’d like to mention is towards the end of the video i didn’t cut “i miss my brother a lot man” cause i was tryna tell the audience that i miss my brother a lot too 
 
+my intention behind making the video slow was because we haven’t posted in a while, and if you’ve been to our events, you’re probably wondering when the next one is especially now that summer’s here. the slow pace builds that curiosity and keeps people watching, really waiting for that reveal.
+to make it feel more personal and address what everyone’s probably thinking, i included the question: when is second soul gonna reveal their team? and to add a bit of humor and make it more relatable, i threw in how do i get all my parlays to hit?
+the rest flows from there we are positioning ourselves like a sports franchise, and the next event is our next “game.” 
+</p>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.piece video').forEach(vid => {
+      vid.addEventListener('mouseenter', () => vid.play());
+      vid.addEventListener('mouseleave', () => vid.pause());
+    });
+  </script>
+
+</main>
+</html>
