@@ -23,9 +23,14 @@
   <img src="assets/pieces/pho/1.jpg" class="active">
   <img src="assets/pieces/pho/2.jpg">
   <img src="assets/pieces/pho/3.jpg">
+  <img src="assets/pieces/pho/4.jpg">
   <img src="assets/pieces/pho/11.jpg">
   <img src="assets/pieces/pho/22.jpg">
   <img src="assets/pieces/pho/33.jpg">
+  <img src="assets/pieces/pho/44.jpg">
+  <img src="assets/pieces/pho/55.jpg">
+
+  
   <div class="slideshow-dots"></div>
 </div>
 
@@ -67,7 +72,7 @@
     </div>
     <div class="video-card">
     <video loop muted playsinline>
-        <source src="assets/pieces/ae/finalv reel .mp4" type="video/mp4">
+        <source src="assets/pieces/ae/reel.mp4" type="video/mp4">
       </video>
     </div>
   </div>
@@ -77,6 +82,11 @@
 const imgs = document.querySelectorAll('.slideshow img');
 const dotsEl = document.querySelector('.slideshow-dots');
 let current = 0;
+
+document.querySelectorAll('.video-card video').forEach(vid => {
+  vid.addEventListener('mouseenter', () => vid.play());
+  vid.addEventListener('mouseleave', () => vid.pause());
+});
 
 imgs.forEach((_, i) => {
   const dot = document.createElement('span');
@@ -99,11 +109,6 @@ document.addEventListener('keydown', e => {
 });
 
 setInterval(() => goTo(current + 1), 4000);
-
-document.querySelectorAll('.video-card video').forEach(vid => {
-  vid.addEventListener('mouseenter', () => vid.play());
-  vid.addEventListener('mouseleave', () => { vid.pause(); vid.currentTime = 0; });
-});
 </script>
 
 </main>
