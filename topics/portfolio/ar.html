@@ -8,6 +8,7 @@
   <script src="js/libraries/p5.min.js"></script>
   <script src="js/libraries/p5.sound.min.js"></script>
 </head>
+<body>
 <main>
   <nav>
     <div class="nav2">
@@ -30,7 +31,7 @@
 
   <!-- PIECE 2 — image -->
   <div class="piece">
-    <img src="assets/ar/beerb.jpg" alt="">
+    <img src="assets/ar/beer.jpg" alt="">
     <div class="description">
       <h4>Curator's Note</h4>
       <p>i happened to take these two pictures at the same time. they were placed right next to each other at the gallery, and even though
@@ -44,28 +45,41 @@
   </div>
 
   <div class="piece">
-    <video loop muted playsinline preload="metadata">
-      <source src="assets/ar/showbix.mp4" type="video/mp4">
-    </video>
+<video loop muted playsinline preload="auto">
+  <source src="assets/ar/showbix.mp4" type="video/mp4">
+</video>
     <div class="description">
       <h4>Curator's Note</h4>
-      <p>the beginning sequence of the video shows everything in black and white, except for the artist  he's in color, almost glowing. to me, that felt like being completely disconnected from everything around me, just locked into listening to this one man speak. towards the end, right when he says "that's how people live on, remember that," he flashes into blue. that moment says everything. the artist's name is navy blue, and to me, that flash wasn’t just visual it was symbolic. his words, his thoughts, his purity that’s what navy blue represents. and giving him that blue glow was my way of saying: this is navy blue
-i love this video so much. there are so many little details too, like the font in the beginning being spaced out loud and clear while towards the end, the letters are so close together, like they’re hugging each other. and also, near the end, the camera loses focus and blurs out, which felt like a subtle way of saying the camera was crying or rather, the person behind it was. i was actually crying hahahaif you look closely at the video, you’ll notice the visuals around are hazy and glowing that’s because it’s all from my point of view. i was in tears the whole time. everything looked soft, unfocused, almost dreamlike. it’s that feeling when your eyes are filled with tears  you can still see, but everything’s blurred, glowing at the edges, like the world is melting quietly in front of you. that’s what i was seeing. that’s what i wanted the video to feel like.
-one last detail i’d like to mention is towards the end of the video i didn’t cut “i miss my brother a lot man” cause i was tryna tell the audience that i miss my brother a lot too 
+      <p>the beginning sequence of the video shows everything in black and white, except for the artist  he's in color, almost glowing. to me, that felt like being completely disconnected from everything around me, just locked into listening to this one man speak. towards the end, right when he says "<strong>that's how people live on, remember that</strong>" he flashes into blue. that moment says everything. the artist's name is <strong>navy blue</strong>, and to me, that flash wasn’t just visual it was symbolic. his words, his thoughts, his purity that’s what navy blue represents. and giving him that blue glow was my way of saying: this is navy blue
+i love this video so much. there are so many little details too, like the font in the beginning being spaced out loud and clear while towards the end, the letters are so close together, like they’re hugging each other. and also, near the end, the camera loses focus and blurs out, which felt like a subtle way of saying the camera was crying or rather, the person behind it was. i was actually crying hahaha if you look closely at the video, you’ll notice the visuals around are hazy and glowing that’s because it’s all from my point of view. i was in tears the whole time. everything looked <strong>soft, unfocused, almost dreamlike</strong>. it’s that feeling when your eyes are filled with tears  you can still see, but everything’s blurred, glowing at the edges, like the world is melting quietly in front of you. that’s what i was seeing. that’s what i wanted the video to feel like.
+one last detail i’d like to mention is towards the end of the video i didn’t cut “i miss my brother a lot man” cause i was tryna tell the audience that i miss my brother a lot too</p>
 
-my intention behind making the video slow was because we haven’t posted in a while, and if you’ve been to our events, you’re probably wondering when the next one is especially now that summer’s here. the slow pace builds that curiosity and keeps people watching, really waiting for that reveal.
-to make it feel more personal and address what everyone’s probably thinking, i included the question: when is second soul gonna reveal their team? and to add a bit of humor and make it more relatable, i threw in how do i get all my parlays to hit?
-the rest flows from there we are positioning ourselves like a sports franchise, and the next event is our next “game.” 
-</p>
     </div>
   </div>
+  </main>
 
   <script>
-    document.querySelectorAll('.piece video').forEach(vid => {
-      vid.addEventListener('mouseenter', () => vid.play());
-      vid.addEventListener('mouseleave', () => vid.pause());
-    });
+  // Replace your script with this:
+document.querySelectorAll('.piece video').forEach(vid => {
+  vid.load(); // force preload on page load
+
+  vid.addEventListener('mouseenter', () => {
+    vid.muted = false;
+    vid.volume = 0.14;
+    const playPromise = vid.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => { vid.muted = true; });
+    }
+  });
+
+  vid.addEventListener('mouseleave', () => {
+    vid.pause();
+    vid.currentTime = 0;
+    vid.muted = true;
+  });
+});
   </script>
 
-</main>
+  </body>
+
 </html>
